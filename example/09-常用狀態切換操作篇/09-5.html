@@ -36,26 +36,8 @@
     </div>
 
     <script>
+        //請寫一個點擊可以切換頁面的js，預設為首頁
         
-        var navBtn = document.getElementsByClassName('nav');
-        var page = document.getElementsByClassName('page');
-        var pageIdx = 0;
-
-        page[0].style.display = 'flex';
-
-        for(var i = 0; i < navBtn.length; i++){
-            navBtn[i].addEventListener('click', menuClcik);
-        }
-        
-        function menuClcik(){
-            for(var s = 0; s < navBtn.length; s++){
-                navBtn[s].classList.remove('active');
-                page[s].style.display = 'none';
-            }
-            this.classList.add('active');
-            pageIdx = Number(this.id.substr(1));
-            page[pageIdx-1].style.display = 'flex';
-        }
         
         
     </script>

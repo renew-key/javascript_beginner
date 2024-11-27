@@ -19,6 +19,7 @@
     </div>
     <footer></footer>
     <script>
+        //請試著用我們所學到的知識，用for迴圈對應title和url並且用innerHTML遷入到HTML裡面
         var html = '';
         var title = [
             "會計年度最後一個月 美國防部狂花1.4億買蝦蟹...",
@@ -40,10 +41,7 @@
             "https://news.ebc.net.tw/News/Article/155499",
             "https://news.ebc.net.tw/News/Article/155497",
         ];
-        for(var i = 0; i < title.length; i++){
-            html+= '<li><a href="'+url[i]+'" target="_blank">'+title[i]+'</a></li>'
-        }
-        document.getElementById("list").innerHTML = html;
+       
 
     </script>
 </body>

@@ -25,18 +25,8 @@
     </div>
 
     <script>
-        var navBtn = document.getElementsByClassName('nav');
-
-        for(var i = 0; i < navBtn.length; i++){
-            navBtn[i].addEventListener('click', menuClcik);
-        }
-        
-        function menuClcik(){
-            for(var s = 0; s < navBtn.length; s++){
-                navBtn[s].classList.remove('active');
-            }
-            this.classList.add('active');
-        }
+        //當點擊到nav其中一個時請掛上class為active的屬性，其他的nav要remove掉class為active
+     
 
 
     </script>

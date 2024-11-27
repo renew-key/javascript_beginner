@@ -26,33 +26,7 @@
             '../images/05/small/a4.jpg',
             '../images/05/small/a5.jpg',
         ];
-        var angleleft = document.getElementById('angleleft');
-        var angleright = document.getElementById('angleright');
-        var photo = document.getElementById('photo');
-        var pagination = document.getElementById('pagination');
-        var pageIdx = 0;
-
-        angleleft.addEventListener('click', function(){
-            pageIdx--;
-            if(pageIdx < 0){
-                pageIdx = 4;
-            }
-            handImgChange();
-        })
-
-        angleright.addEventListener('click', function(){
-            pageIdx++;
-            if(pageIdx > 4){
-                pageIdx = 0;
-            }
-            handImgChange();
-        })
-
-        function handImgChange(){
-            photo.src = arr[pageIdx];
-            pagination.innerText = (pageIdx + 1) + "/" + arr.length;
-        }
-
+        // 請寫出照片輪播功能
 
     </script>
 </body>

@@ -18,61 +18,8 @@
     </div>
 
     <script>
-        var timeTxt = document.getElementById('timeTxt');
-        var play = document.getElementById('play');
-        var stop = document.getElementById('stop');
-        var reset = document.getElementById('reset');
-
-        var playTime = null;
-        var time = 0;
-        var isStop = false;
-
-        play.addEventListener("click", playFn);
-        stop.addEventListener("click", stopFn);
-        reset.addEventListener('click', resetFn)
-
-        
-        function playFn(){
-            play.removeEventListener("click", playFn);
-            TimeGo();
-            resetActive();
-            this.classList.add('active');
-        }
-        
-        function stopFn(){
-            play.addEventListener("click", playFn);
-            clearInterval(playTime);
-            resetActive();
-            this.classList.add('active');
-        }
-
-        function resetFn(){
-            play.removeEventListener("click", playFn);
-            time = 0;
-            timeTxt.innerText = time;
-            resetActive();
-            this.classList.add('active');
-            clearInterval(playTime);
-            setTimeout(function(){
-                resetActive();
-                play.addEventListener("click", playFn);
-            }, 1500);
-            
-        }
-
-        function TimeGo(){
-            playTime = setInterval(function(){
-                time++;
-                timeTxt.innerText = time;
-            }, 1000);
-        }
-
-        function resetActive(){
-            play.classList.remove('active');
-            stop.classList.remove('active');
-            reset.classList.remove('active');
-        }
-
+        //寫一個播放、暫停、重新的計時器
+      
 
 
     </script>
